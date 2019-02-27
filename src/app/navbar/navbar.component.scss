@@ -1,0 +1,100 @@
+@import "../app.component.scss";
+
+.main-navbar {
+  background: #7BCB7B;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  &.scrolled  {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    background: white !important;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    .nav-item {
+      &.active {
+        > a {
+          color: black !important;
+        }
+      }
+    }
+    .navbar-toggler {
+      color: black !important;
+    }
+  }
+  &.awake {
+    margin-top: 0px;
+    transition: .5s all ease-out;
+  }
+  &.sleep {
+    transition: .5s all ease-out;
+  }
+  @include media-breakpoint-down(sm) {
+    top: 0;
+    position: relative;
+  }
+  .main-navbar-logo {
+    max-height: 60px;
+  }
+  .navbar-nav {
+    > .nav-item {
+      > .nav-link {
+        font-size: 16px;
+        padding-top: .9rem;
+        padding-bottom: .9rem;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-weight: 400;
+        color: $dark!important;
+        &:hover {
+          color: $primary!important;
+        }
+        opacity: 1!important;
+      }
+      &.cta {
+        > a {
+          border: 2px solid rgba(255,255,255,.7);
+          padding-top: .5rem;
+          padding-bottom: .5rem;
+          padding-left: 20px;
+          padding-right: 20px;
+          margin-top: 4px;
+          span {
+            display: inline-block;
+          }
+        }
+        &.cta-colored {
+          span {
+            border-color: $primary;
+          }
+        }
+      }
+    }
+  }
+  .navbar-toggler {
+    border: none;
+    color: rgba(255,255,255,.7)!important;
+    cursor: pointer;
+    padding-right: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: .1em;
+  }
+}
+.navbar-brand {
+  font-weight: 700;
+  line-height: 1;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+#page-title {
+  color: green;
+  padding: 25px 20px 10px 20px;
+  font-weight: bold;
+  font-size: 25px;
+}
+.nav-link:hover {
+  color: green;
+}

@@ -1,0 +1,34 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+
+$dark: #222222;
+$default: #f9f9ff;
+$primary: #D1F1D1;
+$success: #4cd3e3;
+$info   : #38a4ff;
+$warning: #f4e700;
+$danger: #f44a40;
+$link: #f9f9ff;
+$background: #EFFBEF;
+$clicked: #D1F1D1;
+/*$test2: #A9E1A9;*/
+$hover: #7BCB7B;
+$disable: (#222222, .3);
+$family: Monserrat, Abel, sans-serif;
+
+
+body {
+    width:100%;
+    background-color: #EFFBEF;
+}
+
+.btn-primary {
+    background-color: #7BCB7B !important;
+    border-color: #7BCB7B
+}
+
+.btn-primary:hover {
+    background-color: #28a745 !important;
+    border-color: #28a745
+}
